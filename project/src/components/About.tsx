@@ -90,7 +90,16 @@ const About = () => {
   ];
 
   const highlights = [
-    { icon: GraduationCap, title: 'Graduated', description: 'BS in Information Systems, TUP Manila 2025.' },
+    { 
+      icon: GraduationCap, 
+      title: 'Graduated', 
+      description: (
+        <>
+          BS in Information Systems<br />
+          Magna Cum Laude - TUP Manila 2025.
+        </>
+      )
+    },
     { icon: Briefcase, title: 'Business Analysis', description: 'Analyzed requirements and bridged users with development teams.' },
     { icon: Code, title: 'Frontend Development', description: 'Built responsive, interactive web interfaces using modern frameworks and best practices.' },
     { icon: Layout, title: 'System Design', description: 'Designed scalable web-based systems with user-friendly interfaces and optimized workflows.' },
