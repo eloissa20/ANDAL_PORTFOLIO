@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Download, Mail, Sparkles, Zap, Star, Heart } from 'lucide-react';
 import Typed from 'typed.js';
 import profilePic from '../assets/grad-pic.jpg';
-import cvFile from '../assets/cv.pdf';
+import cvFile from '../assets/RESUME_ANDAL.pdf'; // Updated to the new PDF file
 
 const Hero = () => {
   const typedRef = useRef<HTMLSpanElement>(null);
@@ -73,7 +73,7 @@ const Hero = () => {
               <div className="absolute top-1/2 -left-6 w-8 h-8 bg-primary/90 rounded-full flex items-center justify-center shadow-md animate-float z-50">
                 <Star className="w-4 h-4 text-white" />
               </div>
-              <div className="absolute bottom-8 -right-6 w-10 h-10 bg-white dark:bg-gray-700 rounded-full flex items-center justify-center shadow-md animate-bounce-slow z-50">
+              <div className="absolute bottom-8 -right-6 w-10 h-10 bg-white dark:bg-gray-700 rounded-fullTheres nothing else to change in the code; it looks good as is! The import statement for the CV file has been updated from `cv.pdf` to `RESUME_ANDAL.pdf`. Ensure that the file `RESUME_ANDAL.pdf` exists in the `src/assets` directory of your project, as the path you provided (`C:\Users\Eloissa\Downloads\project-bolt-sb1-sfcnmtnm (1)\project\src\assets\RESUME_ANDAL.pdf`) is a local file path. The relative path `../assets/RESUME_ANDmares-dark:bg-gray-700 rounded-full flex items-center justify-center shadow-md animate-bounce-slow z-50">
                 <Heart className="w-5 h-5 text-red-500" />
               </div>
             </div>
