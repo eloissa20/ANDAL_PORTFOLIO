@@ -31,7 +31,7 @@ const Projects = () => {
       date: 'JULY 2025',
       features: ['Fanbase Directory', 'Music Streaming & Purchase Links', 'Community Guidelines'], // Add comma here
       github: 'https://github.com/eloissa20/BLACKPINK_WEBSITE.git',
-      demo: 'blackpink-website.vercel.app',
+      demo: 'https://blackpink-website-g7gdr44cc-andal-projects.vercel.app/',
       bgClass: 'bg-mint/20 dark:bg-gray-900',
     },
     {
