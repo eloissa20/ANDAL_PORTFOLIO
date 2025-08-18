@@ -183,7 +183,7 @@ const About = () => {
                   {showMore && (
                     <motion.div variants={containerVariants} initial="hidden" animate="visible">
                       <motion.p variants={cardVariants}>
-                        I graduate with a strong foundation in technology and business processes. Experienced with social media platforms, office productivity tools, and computer applications. Motivated, adaptable, and eager to apply skills to professional projects.
+                        With a solid background in technology and business processes, I am experienced in social media platforms, office productivity tools, and computer applications. I am motivated, adaptable, and eager to apply my skills to professional projects.
                       </motion.p>
                     </motion.div>
                   )}
