@@ -183,10 +183,7 @@ const About = () => {
                   {showMore && (
                     <motion.div variants={containerVariants} initial="hidden" animate="visible">
                       <motion.p variants={cardVariants}>
-                        During my studies and internship, I gained hands-on experience with various programming languages, database management systems, and modern web development frameworks. I'm particularly interested in frontend development, system design, and ERP systems.
-                      </motion.p>
-                      <motion.p variants={cardVariants}>
-                        I'm excited to start my career in the tech industry and contribute to meaningful projects that make a positive impact. I'm always eager to learn new technologies and take on challenging problems.
+                        I graduate with a strong foundation in technology and business processes. Experienced with social media platforms, office productivity tools, and computer applications. Motivated, adaptable, and eager to apply skills to professional projects.
                       </motion.p>
                     </motion.div>
                   )}
