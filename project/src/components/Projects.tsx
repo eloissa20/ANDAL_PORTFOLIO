@@ -15,13 +15,27 @@ import CFV from '../assets/confianzaVogue_grp3.png';
 import CRYP from '../assets/CRYPTOGRAPHY.png';
 import acts from '../assets/ACTS.jpg';
 
+// Define TypeScript interface for projects
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  category: 'WEB DEVELOPMENT' | 'UI/UX' | 'OTHERS';
+  date: string;
+  features: string[];
+  github: string | (() => void);
+  demo: string | (() => void);
+  bgClass?: string;
+}
+
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState('ALL');
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeCategory, setActiveCategory] = useState<string>('ALL');
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
 
-  const categories = ['ALL', 'WEB DEVELOPMENT', 'UI/UX', 'OTHERS'];
+  const categories: string[] = ['ALL', 'WEB DEVELOPMENT', 'UI/UX', 'OTHERS'];
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: 'BLINK',
       description: 'An interactive web platform designed for BLINKs, providing everything they need to know about BLACKPINK — from fanbases and guidelines to music support.',
@@ -29,7 +43,7 @@ const Projects = () => {
       technologies: ['Vite', 'TypeScript', 'React'],
       category: 'WEB DEVELOPMENT',
       date: 'JULY 2025',
-      features: ['Fanbase Directory', 'Music Streaming & Purchase Links', 'Community Guidelines'], // Add comma here
+      features: ['Fanbase Directory', 'Music Streaming & Purchase Links', 'Community Guidelines'],
       github: 'https://github.com/eloissa20/BLACKPINK_WEBSITE.git',
       demo: 'https://blackpink-website.vercel.app/',
       bgClass: 'bg-mint/20 dark:bg-gray-900',
@@ -53,7 +67,7 @@ const Projects = () => {
       technologies: ['Figma'],
       category: 'UI/UX',
       date: 'JULY 2023',
-      features: ['Fun & Colorful Onboarding', 'Quick Login Options', ' Smooth Shopping Experience'],
+      features: ['Fun & Colorful Onboarding', 'Quick Login Options', 'Smooth Shopping Experience'],
       github: 'https://www.figma.com/design/Wrs1nq7kaKeNpwn0KjfaOY/ICE-CREAM-ONLINE-SHOP?node-id=0-1&m=dev&t=zBcKSdUoegNPY7OA-1',
       demo: 'https://www.figma.com/proto/Wrs1nq7kaKeNpwn0KjfaOY/ICE-CREAM-ONLINE-SHOP?node-id=0-1&t=zBcKSdUoegNPY7OA-1',
       bgClass: 'bg-mint/20 dark:bg-gray-900',
@@ -66,7 +80,7 @@ const Projects = () => {
       category: 'WEB DEVELOPMENT',
       date: 'APRIL 2025',
       features: ['Insight of Obanana works', 'Online Shopping', 'Bottleneck identification', 'User-centered design approach'],
-      github: () => alert('Unavailable due to Company Privacy & Rights'),
+      github: () => typeof window !== 'undefined' && window.alert('Unavailable due to Company Privacy & Rights'),
       demo: 'https://obanana.com/',
       bgClass: 'bg-mint/20 dark:bg-gray-900',
     },
@@ -77,7 +91,7 @@ const Projects = () => {
       technologies: ['Adobe XD'],
       category: 'UI/UX',
       date: 'JULY 2023',
-      features: ['Interest-Based Onboarding', ' Self-Discovery Tools', 'Profile Customization', 'Export capabilities'],
+      features: ['Interest-Based Onboarding', 'Self-Discovery Tools', 'Profile Customization', 'Export capabilities'],
       github: 'https://github.com/eloissa20/ADOBE-FILE',
       demo: 'https://github.com/eloissa20/ADOBE-FILE',
       bgClass: 'bg-mint/20 dark:bg-gray-900',
@@ -90,8 +104,8 @@ const Projects = () => {
       category: 'WEB DEVELOPMENT',
       date: 'APRIL 2025',
       features: ['Document & Compliance Control', 'Real-Time Reporting & Dashboards', 'File encryption support', 'Issue Tracking & Continuous Improvement'],
-      github: () => alert('Unavailable due to Company Privacy & Rights'),
-      demo: () => alert('Unavailable due to Company Privacy & Rights'),
+      github: () => typeof window !== 'undefined' && window.alert('Unavailable due to Company Privacy & Rights'),
+      demo: () => typeof window !== 'undefined' && window.alert('Unavailable due to Company Privacy & Rights'),
       bgClass: 'bg-mint/20 dark:bg-gray-900',
     },
     {
@@ -113,9 +127,9 @@ const Projects = () => {
       technologies: ['JavaScript', 'Node.js', 'MongoDB'],
       category: 'WEB DEVELOPMENT',
       date: 'JUNE 2024',
-      features: ['Smart Student Progression', 'Centralized Grade & Attendance Management', ' Role-Based Portals'],
+      features: ['Smart Student Progression', 'Centralized Grade & Attendance Management', 'Role-Based Portals'],
       github: 'https://github.com/acpr-2023/school',
-      demo: () => alert('Currently unavailable'),
+      demo: () => typeof window !== 'undefined' && window.alert('Currently unavailable'),
       bgClass: 'bg-mint/20 dark:bg-gray-900',
     },
     {
@@ -127,7 +141,7 @@ const Projects = () => {
       date: 'SEPTEMBER 2023',
       features: ['Real-Time Stock Management', 'Inventory Reporting', 'Search & Filter Functionality'],
       github: 'https://github.com/eloissa20/Meat-Inventory-Sytem/tree/697d7fb38226b644654b23037b70f4fe5cc3d185',
-      demo: () => alert('Currently unavailable'),
+      demo: () => typeof window !== 'undefined' && window.alert('Currently unavailable'),
       bgClass: 'bg-mint/20 dark:bg-gray-900',
     },
     {
@@ -139,7 +153,7 @@ const Projects = () => {
       date: 'JUNE 2024',
       features: ['Add-to-Cart Booking', 'Streamlined Scheduling', 'User-Friendly Interface'],
       github: 'https://github.com/acpr-2023/Cleaning-Fairies-Website',
-      demo: () => alert('Currently unavailable'),
+      demo: () => typeof window !== 'undefined' && window.alert('Currently unavailable'),
       bgClass: 'bg-mint/20 dark:bg-gray-900',
     },
     {
@@ -149,7 +163,7 @@ const Projects = () => {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       category: 'WEB DEVELOPMENT',
       date: 'JANUARY 2024',
-      features: ['Document & Compliance Control', 'Real-Time Reporting & Dashboards', 'File encryption support', 'Issue Tracking & Continuous Improvement '],
+      features: ['Document & Compliance Control', 'Real-Time Reporting & Dashboards', 'File encryption support', 'Issue Tracking & Continuous Improvement'],
       github: 'https://github.com/jayannbal/Andal_Balatero_Caguiat-InterestWebsite-KPOP',
       demo: 'https://stbverse.netlify.app/',
       bgClass: 'bg-mint/20 dark:bg-gray-900',
@@ -163,7 +177,7 @@ const Projects = () => {
       date: 'SEPTEMBER 2023',
       features: ['Multiple Encryption Algorithms', 'Graphical User Interface', 'Text & File Encryption Support'],
       github: 'https://github.com/eloissa20/Cryptography-with-GUI',
-      demo: () => alert('Currently unavailable'),
+      demo: () => typeof window !== 'undefined' && window.alert('Currently unavailable'),
       bgClass: 'bg-mint/20 dark:bg-gray-900',
     },
     {
@@ -174,8 +188,8 @@ const Projects = () => {
       category: 'WEB DEVELOPMENT',
       date: 'JANUARY 2024',
       features: ['Aesthetic UI Design', 'Responsive Web Pages', 'User-Centered Interface'],
-      github: 'https://github.com/eloissa20/GROUP-3_WEBSITE',
-      demo: () => alert('Currently unavailable'),
+      github: 'https://github.com/eloissa20/G MosqueROUP-3_WEBSITE',
+      demo: () => typeof window !== 'undefined' && window.alert('Currently unavailable'),
       bgClass: 'bg-mint/20 dark:bg-gray-900',
     },
     {
@@ -185,9 +199,9 @@ const Projects = () => {
       technologies: ['Adobe XD'],
       category: 'UI/UX',
       date: 'JUNE 2023',
-      features: [' Job Matching System', 'Accessible Online Platform', ' Location-Based Search', 'Empowerment Through Employment'],
+      features: ['Job Matching System', 'Accessible Online Platform', 'Location-Based Search', 'Empowerment Through Employment'],
       github: '#',
-      demo: () => alert('Currently unavailable'),
+      demo: () => typeof window !== 'undefined' && window.alert('Currently unavailable'),
       bgClass: 'bg-mint/20 dark:bg-gray-900',
     },
   ];
@@ -239,6 +253,7 @@ const Projects = () => {
                   ? 'bg-primary text-white shadow-lg'
                   : 'bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary'
               }`}
+              aria-pressed={activeCategory === category}
             >
               {category}
             </button>
@@ -250,15 +265,15 @@ const Projects = () => {
             <>
               <button
                 onClick={prevSlide}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10 w-12 h-12 bg-white dark:bg-gray-900 rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-200 hidden lg:flex"
-                aria-label="Previous slide"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-16 z-10 w-12 h-12 bg-white dark:bg-gray-900 rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-200"
+                aria-label="Previous project slide"
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
               <button
                 onClick={nextSlide}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10 w-12 h-12 bg-white dark:bg-gray-900 rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-200 hidden lg:flex"
-                aria-label="Next slide"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-16 z-10 w-12 h-12 bg-white dark:bg-gray-900 rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-200"
+                aria-label="Next project slide"
               >
                 <ChevronRight className="h-6 w-6" />
               </button>
@@ -276,15 +291,16 @@ const Projects = () => {
                     {filteredProjects
                       .slice(slideIndex * projectsPerSlide, slideIndex * projectsPerSlide + projectsPerSlide)
                       .map((project, index) => (
-                      <div
-                        key={index}
-                       className={`flex flex-col min-h-[550px] ${project.bgClass} rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-mint/40 dark:border-gray-700 group mb-6`}
-                      >
+                        <div
+                          key={index}
+                          className={`flex flex-col min-h-[550px] ${project.bgClass || 'bg-mint/20 dark:bg-gray-900'} rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-mint/40 dark:border-gray-700 group mb-6`}
+                        >
                           <div className="relative overflow-hidden h-48">
                             <img
                               src={project.image}
-                              alt={project.title}
+                              alt={`Screenshot of ${project.title} project`}
                               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                              loading="lazy"
                             />
                             <div className="absolute top-4 left-4">
                               <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(project.category)}`}>
@@ -328,20 +344,48 @@ const Projects = () => {
                             </div>
 
                             <div className="mt-auto pt-2 flex space-x-3 justify-between items-center">
-                              <a
-                                href={project.github}
-                                className="flex items-center justify-center px-4 h-10 w-[140px] bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-full hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-200"
-                              >
-                                <Github className="h-4 w-4 mr-1" />
-                                Code
-                              </a>
-                              <a
-                                href={project.demo}
-                                className="flex items-center justify-center px-4 h-10 w-[140px] bg-primary text-white text-sm rounded-full hover:bg-primary/90 transition-colors duration-200"
-                              >
-                                <ExternalLink className="h-4 w-4 mr-1" />
-                                Demo
-                              </a>
+                              {typeof project.github === 'string' && project.github !== '#' ? (
+                                <a
+                                  href={project.github}
+                                  className="flex items-center justify-center px-4 h-10 w-[140px] bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-full hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-200"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`View ${project.title} source code on GitHub`}
+                                >
+                                  <Github className="h-4 w-4 mr-1" />
+                                  Code
+                                </a>
+                              ) : (
+                                <button
+                                  onClick={typeof project.github === 'function' ? project.github : () => typeof window !== 'undefined' && window.alert('Source code unavailable')}
+                                  className="flex items-center justify-center px-4 h-10 w-[140px] bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-full hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-200"
+                                  aria-label={`View ${project.title} source code information`}
+                                >
+                                  <Github className="h-4 w-4 mr-1" />
+                                  Code
+                                </button>
+                              )}
+                              {typeof project.demo === 'string' && project.demo !== '#' ? (
+                                <a
+                                  href={project.demo}
+                                  className="flex items-center justify-center px-4 h-10 w-[140px] bg-primary text-white text-sm rounded-full hover:bg-primary/90 transition-colors duration-200"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`View ${project.title} live demo`}
+                                >
+                                  <ExternalLink className="h-4 w-4 mr-1" />
+                                  Demo
+                                </a>
+                              ) : (
+                                <button
+                                  onClick={typeof project.demo === 'function' ? project.demo : () => typeof window !== 'undefined' && window.alert('Demo unavailable')}
+                                  className="flex items-center justify-center px-4 h-10 w-[140px] bg-primary text-white text-sm rounded-full hover:bg-primary/90 transition-colors duration-200"
+                                  aria-label={`View ${project.title} demo information`}
+                                >
+                                  <ExternalLink className="h-4 w-4 mr-1" />
+                                  Demo
+                                </button>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -361,7 +405,8 @@ const Projects = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-200 ${
                     currentSlide === index ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'
                   }`}
-                  aria-label={`Go to slide ${index + 1}`}
+                  aria-label={`Go to project slide ${index + 1}`}
+                  aria-current={currentSlide === index ? 'true' : 'false'}
                 />
               ))}
             </div>
@@ -380,6 +425,7 @@ const Projects = () => {
               }
             }}
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-primary to-primary/90 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+            aria-label="Scroll to contact section"
           >
             Let's Connect
           </button>
