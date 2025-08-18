@@ -29,7 +29,7 @@ const Projects = () => {
       technologies: ['Vite', 'TypeScript', 'React'],
       category: 'WEB DEVELOPMENT',
       date: 'JULY 2025',
-      features: ['Fanbase Directory', 'Music Streaming & Purchase Links', 'Community Guidelines']
+      features: ['Fanbase Directory', 'Music Streaming & Purchase Links', 'Community Guidelines'], // Add comma here
       github: 'https://github.com/eloissa20/BLACKPINK_WEBSITE.git',
       demo: 'blackpink-website.vercel.app',
       bgClass: 'bg-mint/20 dark:bg-gray-900',
