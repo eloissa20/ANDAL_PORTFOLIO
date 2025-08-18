@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ExternalLink, Github, Calendar, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 import CoZone from '../assets/cozone.png';
+import Bpweb from '../assets/bpweb.png';
 import Figma from '../assets/figma.png';
 import Obanana from '../assets/obanana.png';
 import School from '../assets/school.png';
@@ -21,6 +22,18 @@ const Projects = () => {
   const categories = ['ALL', 'WEB DEVELOPMENT', 'UI/UX', 'OTHERS'];
 
   const projects = [
+    {
+      title: 'BLINK',
+      description: 'An interactive web platform designed for BLINKs, providing everything they need to know about BLACKPINK — from fanbases and guidelines to music support.',
+      image: Bpweb,
+      technologies: ['Vite', 'TypeScript', 'React'],
+      category: 'WEB DEVELOPMENT',
+      date: 'JULY 2025',
+      features: ['Fanbase Directory', 'Music Streaming & Purchase Links', 'Community Guidelines']
+      github: 'https://github.com/eloissa20/BLACKPINK_WEBSITE.git',
+      demo: 'blackpink-website.vercel.app',
+      bgClass: 'bg-mint/20 dark:bg-gray-900',
+    },
     {
       title: 'CoZone',
       description: 'A web-based platform that connects you to inspiring coworking spaces—designed to boost focus, creativity, and collaboration.',

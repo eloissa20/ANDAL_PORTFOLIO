@@ -141,7 +141,7 @@ const handleSubmit = (e: React.FormEvent) => {
                   <span className="text-green-800 dark:text-green-400 font-medium">Available for new opportunities</span>
                 </div>
                 <p className="text-green-700 dark:text-green-300 text-sm mt-2">
-                  Currently seeking entry-level positions in IT and software development
+                  Eager to leverage my expertise in technology and business processes to deliver innovative, user-focused solutions in dynamic professional environments.
                 </p>
               </div>
             </div>
